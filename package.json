@@ -1,0 +1,25 @@
+{
+  "name": "handlebars-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/babco1kr/handlebars-game.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "handlebars",
+    "mysql"
+  ],
+  "author": "Kyle Babcock",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/babco1kr/handlebars-game/issues"
+  },
+  "homepage": "https://github.com/babco1kr/handlebars-game#readme"
+}
