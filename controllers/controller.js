@@ -13,7 +13,6 @@ router.get("/", function(req, res) {
 
 router.put("/api/coasters/:id", function(req, res) {
     var condition = "id = " + req.params.id;
-    console.log(condition);
     coasters.update(
         "rode", req.body.rode,
      condition, function(results) {

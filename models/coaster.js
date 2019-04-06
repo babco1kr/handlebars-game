@@ -16,13 +16,7 @@ var coasters = {
         orm.updateOne("coasters", colName, colVal, condition, function(res) {
           cb(res);
         });
-      },
-
-
-
-
-
-
+      }
 }
 
 module.exports = coasters;
