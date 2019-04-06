@@ -1,19 +1,19 @@
 var connection = require("../config/connection.js");
 
 var orm = {
-    selectAll = function (table) {
-        connection.query("select * from ??", table, function(err, res) {
+    selectAll: function (table, cb) {
+        connection.query("select * from ??", table , function(err, res) {
            if (err) throw err;
-           return res; 
+           cb(res); 
         })
     },
-    insertOne = function (table, colInfo) {
+    insertOne: function (table, colInfo, cb) {
         connection.query("insert into ?? set ?", table, [colInfo[0], colInfo[1]], function(err, res) {
             if (err) throw err;
-            return res;
+            cb(res)
         })
     },
-    updateOne = function (table, colInfo) {
+    updateOne: function (table, colInfo) {
         connection.query("")
     }
 }
