@@ -11,7 +11,12 @@ var coasters = {
         orm.insertOne("coasters", cols, vals, function(res) {
             cb(res);
         })
-    }
+    },
+    update: function(colName, colVal, condition, cb) {
+        orm.updateOne("coasters", colName, colVal, condition, function(res) {
+          cb(res);
+        });
+      },
 
 
 
