@@ -9,7 +9,6 @@ var orm = {
     },
     insertOne: function (table, cols, vals, cb) {
         var queryURL = "insert into " + table + " (" + cols.toString() + ") values (?)";
-        console.log(queryURL);
         connection.query(queryURL, vals, function(err, res) {
             if (err) throw err;
             cb(res)
@@ -17,8 +16,6 @@ var orm = {
     },
     updateOne: function (table, colName, colVal, condition, cb) {
         var queryURL = "update " + table +  " set " + colName + " = " + colVal + " where " + condition + "";
-        console.log(queryURL);
-        // console.log(objVals);
         connection.query(queryURL, function(err, res) {
             if(err) throw err;
             cb(res);
