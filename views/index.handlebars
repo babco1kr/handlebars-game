@@ -1,6 +1,20 @@
 <ul>
   {{#each coasters}}
-    
-    {{coaster_name}}
+    {{#unless rode}}
+    <button class = "change-rode" data-id = "{{id}}" data-newrode="{{rode}}">
+      {{coaster_name}}
+    </button>
+    {{/unless}}
   {{/each}}
 </ul>
+
+<ul>
+  {{#each coasters}}
+    {{#if rode}}
+      <button class = "change-rode" data-id = "{{id}}" data-newrode="{{rode}}">
+      {{coaster_name}}
+    </button>
+    {{/if}}
+  {{/each}}
+</ul>
+

@@ -14,7 +14,10 @@ var orm = {
         })
     },
     updateOne: function (table, colInfo) {
-        connection.query("")
+        connection.query("update ?? set ?? where ?? = ?", table, objVals, colName, colVal, function(err, res) {
+            if(err) throw err;
+            cb(res);
+        })
     }
 }
 

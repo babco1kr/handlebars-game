@@ -4,7 +4,7 @@ var router = express.Router();
 
 router.get("/", function(req, res) {
     coasters.ridden(function(data) {
-        var object = {
+        let object = {
             coasters: data
         };
         res.render("index", object);
