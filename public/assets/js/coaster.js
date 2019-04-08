@@ -12,7 +12,7 @@ $(function() {
 
         var newRodeState = {
             rode: rode
-        }
+        };
 
         $.ajax("/api/coasters/" + id, {
             type: "PUT",
