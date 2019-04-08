@@ -3,6 +3,7 @@ body {
     height: 100%;
 }
 
+/* This makes the buttons transparent */
 .change-rode {
     width: 85%;
     margin-bottom: 10px;

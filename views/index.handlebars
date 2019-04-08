@@ -6,6 +6,7 @@
     <div class="row" id = "rideArea">
       <div class="col-sm-4 text-center">
         <h3>Coasters To Ride:</h3>
+        {{!-- Coasters to ride buttons --}}
         <ul>
           {{#each coasters}}
           {{#unless rode}}
@@ -18,6 +19,7 @@
           {{/each}}
         </ul>
       </div>
+      {{!-- Instructions for the application --}}
       <div class="col-sm-4 text-center" id="instructions">
         <p>Add coasters you would like to ride below, and once you have ridden them simply click on them to move them to
           the ridden side.</p>
@@ -26,6 +28,7 @@
       </div>
       <div class="col-sm-4 text-center">
         <h3>Coasters Ridden:</h3>
+        {{!-- Coasters ridden buttons --}}
         <ul>
           {{#each coasters}}
           {{#if rode}}
@@ -39,6 +42,7 @@
         </ul>
       </div>
     </div>
+    {{!-- Area to add a new coaster --}}
     <div class="row">
       <div class="col justify-content-center text-center">
         <form class="create-form">

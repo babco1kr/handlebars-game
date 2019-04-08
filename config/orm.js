@@ -1,5 +1,7 @@
+// Requires connection file
 var connection = require("../config/connection.js");
 
+// Base orm that can work on any databse when called upon
 var orm = {
     selectAll: function (table, cb) {
         connection.query("select * from ??", table , function(err, res) {

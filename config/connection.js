@@ -1,13 +1,19 @@
-// Set up MySQL connection.
+// Set up MySQL connection.\
 var mysql = require("mysql");
+var connection;
 
-var connection = mysql.createConnection({
-  host: "gzp0u91edhmxszwf.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-  port: 3306,
-  user: "a1gjv6hpmcthx2k5",
-  password: "tl5uysuo7xov025a",
-  database: "yq47l0h0cilb0tqb"
-});
+// Uses jaws DB on heroku but local DB for testing
+if (process.env.JAWSDB_URL) {
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+  connection = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    port: 8889,
+    password: "root",
+    database: "rollercoaster_db"
+  });
+}
 
 // Make connection.
 connection.connect(function(err) {
